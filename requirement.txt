@@ -1,0 +1,6 @@
+os
+pandas
+numpy
+matplotlib==3.9.1
+seaborn==0.13.2
+streamlit==1.12.0
