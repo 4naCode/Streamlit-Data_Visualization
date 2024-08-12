@@ -46,9 +46,9 @@ with col2:
 #grettting
 working_dif = os.path.dirname(os.path.abspath(__file__))
 
-#folder_path = f"{working_dif}/data"
+folder_path = f"{working_dif}/data"
  # Define the folder path
-folder_path = f"D:\\Dashboard\\apps\\data"
+#folder_path = f"D:\\Dashboard\\apps\\data"
 # Create the folder if it doesn't exist
 if not os.path.exists(folder_path):
     os.makedirs(folder_path)
@@ -67,7 +67,7 @@ if uploaded_file is not None:
 files_list = [f for f in os.listdir(folder_path) if f.endswith((".csv", ".xlsx"))]
 
 #dropsown for all
-selected_file = st.selectbox("select a file", files_list)#, index=None)
+selected_file = st.selectbox("select a file", files_list, index=None)
 
 if selected_file:
     file_path = os.path.join(folder_path, selected_file)
