@@ -3,3 +3,4 @@ numpy==1.26.4
 pandas==2.2.0
 matplotlib==3.8.2
 seaborn==0.13.2
+pillow==10.0.0
