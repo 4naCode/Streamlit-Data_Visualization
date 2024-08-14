@@ -21,25 +21,29 @@ image_folder_path = os.path.join(working_dir, 'image')
 image_filename = "data.png"
 image_path = os.path.join(image_folder_path, image_filename)
 
-col1, col2 = st.columns([2, 1])  # Adjust the ratio as needed
+#col1, col2 = st.columns([2, 1])  # Adjust the ratio as needed
 
 # Display the image in the first column
-with col1:
-    if os.path.exists(image_path):
-        st.image(image_path, use_column_width=True)  # Adjust width as needed
-    else:
-        st.error("Image file not found")
-
+#with col1:
+#    if os.path.exists(image_path):
+#        st.image(image_path, use_column_width=True)  # Adjust width as needed
+#    else:
+#        st.error("Image file not found")
+# Display the image in a single column
+if os.path.exists(image_path):
+    st.image(image_path, use_column_width=True)  # Adjust width as needed
+else:
+    st.error("Image file not found")
 # Display the video in the second column
-with col2:
-    youtube_video_url = "https://www.youtube.com/watch?v=PVoZ86J3tGQ"  # Replace with your YouTube video URL
-    st.markdown(f"""
-        <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%; height:auto;">
-            <iframe src="{youtube_video_url.replace('watch?v=', 'embed/')}" frameborder="0" allowfullscreen
-                    style="position:absolute; top:0; left:0; width:100%; height:100%;">
-            </iframe>
-        </div>
-        """, unsafe_allow_html=True)
+#with col2:
+#    youtube_video_url = "https://www.youtube.com/watch?v=PVoZ86J3tGQ"  # Replace with your YouTube video URL
+ #   st.markdown(f"""
+ #       <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%; height:auto;">
+ #           <iframe src="{youtube_video_url.replace('watch?v=', 'embed/')}" frameborder="0" allowfullscreen
+ #                   style="position:absolute; top:0; left:0; width:100%; height:100%;">
+ #           </iframe>
+ #       </div>
+ #       """, unsafe_allow_html=True)
 
 # Create the folder for uploaded files if it doesn't exist
 data_folder_path = os.path.join(working_dir, 'data')
