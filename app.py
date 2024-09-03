@@ -7,7 +7,11 @@ from PIL import Image
 
 # Center-align the title using Markdown
 st.markdown("<h1 style='text-align: center;'>Data Analyst</h1>", unsafe_allow_html=True)
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style", unsafe_allow_html=True)
 
+local_css("style/style.css")
 # Set the folder path where files will be saved
 #folder_path = "path_to_save_files"
 #youtube_video_url = "https://www.youtube.com/watch?v=tl_1unb5Asc"  # Replace with your YouTube video URL
